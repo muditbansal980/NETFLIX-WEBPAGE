@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX WEBPAGE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            padding:0px;
+            margin:0px;
+        }
+
+        .logo>H1 {
+            color: red;
+            width: 100vw;
+            /* position: relative; */
+            /* margin-top: 50px; */
+
+
+        }
+
+        header img {
+            opacity: 0.8;
+            filter: brightness(0.6) contrast(2);
+            position: absolute;
+            top: 0px;
+            z-index: -100;
+            width: 100vw;
+            height: 800px;
+        }
+
+        .logo button {
+            background-color: red;
+            color: white;
+            width: 70px;
+            height: 30px;
+
+        }
+
+        .text {
+
+            color: white;
+            margin-top: 10em;
+            min-width: 400px;
+            min-height: 200px;
+            /* border: 2px solid yellow; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text>H1 {
+
+            font-size: 40px;
+            align-self: center;
+        }
+
+        .imgcnt {
+            /* border: 3px solid blue; */
+            display: flex;
+            justify-content: center;
+        }
+
+        .text>p {
+            text-align: center;
+        }
+
+        .forms input {
+            font-size: 35px;
+            background-color: black;
+            opacity: 0.5;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .input {
+            display: inline;
+        }
+
+        .forms button {
+            background-color: red;
+            font-size: 25px;
+            padding: 10px;
+            box-sizing: border-box;
+            
+
+        }
+
+        .forms {
+            display: flex;
+            gap: 10px;
+            margin-top: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+            width:60vw;
+            height:40px;
+
+        }
+
+        .logo {
+            /* border: 3px solid yellow; */
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .reasons {
+            color: white;
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: relative;
+            height: 800px;
+            /* same as image height */
+            /* border: 5px solid yellow; */
+        }
+
+
+        .box {
+            width: 340px;
+            min-height: 200px;
+            background: linear-gradient(to bottom right, #003366, #3399ff);
+            /* dark to light blue */
+            padding: 20px;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            color: white;
+            font-family: sans-serif;
+        }
+
+
+        .cointainer {
+            /* width: 0vw; */
+            /* border: 5px solid pink; */
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            /* justify-content: center;
+            justify-content: space-between; */
+        }
+
+        .main {
+            overflow: auto;
+            border: 5px solid yellow;
+        }
+
+        .faqs {
+            /* border: 5px solid green; */
+            color: white;
+            padding: 40px;
+        }
+
+        .bx {
+            background-color: grey;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            font-size: 20px;
+            /* border: 2px solid yellow; */
+            justify-content: space-between;
+        }
+
+
+        .con2 {
+            /* border: 5px solid yellow; */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            /* border: 2px solid yellow; */
+
+        }
+
+        footer>div {
+            color: white;
+            /* border: 2px solid white; */
+            padding-left: 40px
+        }
+
+        .grid {
+
+            display: grid;
+            grid-template-columns: repeat(4, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            /* border: 2px solid yellow; */
+        }
+
+        .grid>div {
+            color: white;
+            text-decoration: underline;
+        }
+/* 
+        @media (max-width:700px) {
+            .grid{
+                display:block;
+            }
+            .forms{
+                display:grid;
+                grid-template-columns:auto;
+                grid-template-rows: auto;
+                justify-content:center; 
+                 border:5px solid yellow; 
+                position:relative;
+
+            }*/
+             
+@media (max-width: 700px) {
+    .grid {
+        display: block;
+    }
+
+    .forms {
+        display: flex;
+        flex-direction: column !;
+        /* align-items: center; */
+        gap: 12px;
+        width: 90vw;            /* wide enough to match surrounding text */
+        max-width: 600px;       /* optional limit */
+        margin: 20px auto 0;    /* center horizontally */
+    }
+
+    .forms input {
+        width: 100%;
+        padding: 12px;
+        font-size: clamp(14px, 5vw, 18px); /* adjusts font size based on screen width */
+        border-radius: 5px;
+    }
+
+    .forms button {
+        width: 100%;
+        font-size: clamp(14px, 5vw, 18px); /* same auto font sizing */
+        padding: 12px;
+        border-radius: 5px;
+    }
+}
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <H1><b>NETFLIX</b></H1>
+            <button>Sign In</button>
+        </div>
+        <div class="imgcnt">
+            <img src="Background.png"
+                alt="bck">
+            <div class="text">
+                <H1><b>Unlimited movies,TV <br>shows and more</b></H1>
+                <p><b>Starts at ₹149. Cancel at any time.</b></p>
+                <br>
+                <p>
+                    Ready to watch? Enter your email to create or restart your membership.
+                </p>
+                <div class="forms">
+                    <input type="text" placeholder="Enter your Email Address">
+                    <button>Get Started &gt;</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <br>
+    <hr>
+    <main>
+        <div class="reasons">
+            <h1>More Reasons To Join </h1>
+            <div class="cointainer">
+                <div class="box box1">
+                    <H1>Enjoy on your TV</H1>
+                    <P>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</P>
+                </div>
+                <div class="box box2">
+                    <H1>Download your shows to watch offline</H1>
+                    <P>Download your shows to watch offline
+                        Save your favourites easily and always have something to watch.</P>
+                </div>
+                <div class="box box3">
+                    <H1>Watch everywhere</H1>
+                    <P>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</P>
+                </div>
+                <div class="box box4">
+                    <H1>Create profiles for kids</H1>
+                    <P>Send kids on adventures with their favourite characters in a space made just for them — free with
+                        your membership.</P>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="faqs">
+            <H1>Frequenty Asked Questions</H1>
+            <div class="con2">
+                <div class="bx b1">
+                    <H>What is NETFLIX?</H>
+                    <div class="icon">+</div>
+                </div>
+                <div class="bx b2">
+                    <H>How much does NETFLIX COST</H>
+                    <div class="icon">+</div>
+                </div>
+                <div class="bx b3">
+                    <H>Where can I watch?</H>
+                    <div class="icon">+</div>
+                </div>
+                <div class="bx b4">
+                    <H>Is NETFLIX good for kids?</H>
+                    <div class="icon">+</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+    <footer>
+        <div>
+            <p>Questions?Call 1234504949</p>
+        </div>
+        <div class="grid">
+            <div>FAQ</div>
+            <div>Help Center</div>
+            <div>Account</div>
+            <div>Media Center</div>
+            <div>Investor Relations</div>
+            <div>Jobs</div>
+            <div>Ways To Watch</div>
+            <div>Terms of Use</div>
+            <div>Privac</div>
+            <div>Cookie Preferences</div>
+            <div>Corporate Info</div>
+            <div>Contact Us</div>
+            <div>Speed Test</div>
+            <div>Legal Notices</div>
+            <div>Only on Netflix</div>
+
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
